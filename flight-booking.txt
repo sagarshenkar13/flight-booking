@@ -1,0 +1,66 @@
+https://github.com/sagarshenkar13/flight-booking
+
+https://github.com/sagarshenkar13/flight-booking.git
+
+git init
+git add .
+git commit -m "First commit"
+git init -b main   (or)   git branch -M main
+ 
+git remote remove origin
+git remote add origin https://github.com/sagarshenkar13/flight-booking.git
+git remote -v
+git push -u origin main  (or)  git push origin HEAD:main
+git fetch
+git checkout sagar-dev
+git pull origin sagar-dev
+git push -u -f origin sagar-dev
+
+================================================================================================
+================================================================================================
+fatal: unable to access 'https://github.com/sagarshenkar13/flight-booking.git/': SSL certificate problem: unable to get local issuer certificate
+
+To clone
+git -c http.sslVerify=false clone <URL>
+---------------------------------------------------------------------------------------------------------------------------------
+
+git config --global http.sslVerify false
+******To enable it back again, run:
+git config --global http.sslVerify true
+
+---------------------------------------------------------------------------------------------------------------------------------
+git config --local http.sslBackend "openssl"
+You can also skip the revocation check by running this command:
+git config --global http.schannelCheckRevoke false
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+https://www.npmjs.com/package/ngx-toastr
+npm i ngx-toastr@14.3.0 --save
+
+
+
+reactive forms
+https://www.digitalocean.com/community/tutorials/angular-reactive-forms-introduction
+
+------------------------
+****Gm - app.module.ts
+MasterService
+shared routing
+
+HttpClient
+HttpClientModule, HTTP_INTERCEPTORS
+UserDetailsService
+InsertAuthTokenInterceptor
+import { NgbModule, } from '@ng-bootstrap/ng-bootstrap';
+
+import { NgxLoadingModule } from 'ngx-loading';
+import { MonitorInterceptor } from './shared/errorHandlers/interceptors/monitor.interceptor';
+------------------------
+
+popup component
+can activate guard
+
+----
+STANDARD TO FALLOW
+must UNSUBSCRIBE
