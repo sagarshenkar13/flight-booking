@@ -9,6 +9,10 @@ import { EditTravelDetailsComponent } from 'src/app/components/staff/edit-travel
 import { InFlightComponent } from 'src/app/components/staff/in-flight/in-flight.component';
 import { InflightPassengerComponent } from 'src/app/components/staff/inflight-passenger/inflight-passenger.component';
 import { SeatLayoutComponent } from 'src/app/components/staff/seat-layout/seat-layout.component';
+import { StoreModule } from '@ngrx/store';
+import * as fromStaff from '../../store/reducers/staff.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { StaffEffects } from '../../store/effects/staff.effects';
 
 
 @NgModule({
@@ -24,6 +28,8 @@ import { SeatLayoutComponent } from 'src/app/components/staff/seat-layout/seat-l
   imports: [
     CommonModule,
     StaffRoutingModule,
+    StoreModule.forFeature(fromStaff.staffFeatureKey, fromStaff.reducer),
+    EffectsModule.forFeature([StaffEffects]),
   ]
 })
 export class StaffModule { }
