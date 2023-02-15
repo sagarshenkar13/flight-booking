@@ -11,6 +11,7 @@ import { StaffModule } from './modules/staff/staff.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './modules/auth/auth.module';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AuthModule } from './modules/auth/auth.module';
     SharedModule,
     StaffModule,
     HttpClientModule,
-    AuthModule
+    AuthModule,
+    EffectsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
